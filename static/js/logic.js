@@ -64,7 +64,7 @@ d3.json(url).then(function (data) {
     earthquake_data.addTo(myMap);
 
 });
-//create legend, credit to this website for the structure: https://codepen.io/haakseth/pen/KQbjdO -- this structure is referenced in style.css
+//creating a legend 
 let legend = L.control({ position: "bottomright" });
 legend.onAdd = function(myMap) {
     let div = L.DomUtil.create("div", "legend");
@@ -95,9 +95,9 @@ d3.json(url).then(function (data) {
     console.log(geometry);
     let coordinates = geometry.coordinates;
     console.log(coordinates);
-    console.log(coordinates[0]); // longitude
-    console.log(coordinates[1]); // latitude
-    console.log(coordinates[2]); // depth of earthquake
+    console.log(coordinates[0]);
+    console.log(coordinates[1]); 
+    console.log(coordinates[2]); 
     let magnitude = first_result.properties.mag;
     console.log(magnitude);
     //define depth variable
